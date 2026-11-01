@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHXD Icon Fonts</title>
+
+  <style>
+    @font-face {
+      font-family: "CHXD Bags and Storage";
+      src: url("fonts/bags_and_storage.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Code Editor";
+      src: url("fonts/code_editor.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Design Tools";
+      src: url("fonts/design_tools.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Documents and Media";
+      src: url("fonts/documents_and_media.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Editing";
+      src: url("fonts/editing.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD File Management";
+      src: url("fonts/file_management.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD File Operations";
+      src: url("fonts/file_operations.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Media";
+      src: url("fonts/media.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Miscellaneous";
+      src: url("fonts/miscellaneous.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Navigation";
+      src: url("fonts/navigation.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Sorting and Views";
+      src: url("fonts/sorting_and_views.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD Text Editor";
+      src: url("fonts/text_editor.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "CHXD UI Controls";
+      src: url("fonts/ui_controls.ttf") format("truetype");
+    }
+
+    :root {
+      color-scheme: light dark;
+      --line: #d0d0d0;
+      --sel: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+      font: 14px system-ui, sans-serif;
+    }
+
+    .bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    select,
+    input {
+      padding: 6px 8px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+    }
+
+    #q {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .group + .group {
+      margin-top: 22px;
+    }
+
+    .group h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+      gap: 6px;
+    }
+
+    .cell {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: transparent;
+      color: inherit;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .cell:hover {
+      border-color: var(--sel);
+    }
+
+    .cell.on {
+      border-color: var(--sel);
+      outline: 2px solid var(--sel);
+    }
+
+    .key {
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      font: 11px/1 ui-monospace, Menlo, Consolas, monospace;
+      opacity: 0.6;
+    }
+
+    #info {
+      position: sticky;
+      bottom: 0;
+      display: none;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: Canvas;
+    }
+
+    #info.show {
+      display: flex;
+    }
+
+    #big {
+      font-size: 44px;
+      line-height: 1;
+    }
+
+    #txt {
+      flex: 1;
+      min-width: 160px;
+    }
+
+    #txt small {
+      display: block;
+      font-size: 12px;
+      opacity: 0.65;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      text-decoration: none;
+      border: 1px solid var(--sel);
+      border-radius: 4px;
+      background: var(--sel);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .tester {
+      margin-top: 14px;
+    }
+
+    .visit {
+      margin: 18px 0 0;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    #in {
+      width: 100%;
+    }
+
+    #test {
+      min-height: 1.4em;
+      font-size: 36px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bar">
+    <select id="fam" aria-label="Font family"></select>
+    <a class="btn" id="dl" href="#" download>Download .ttf</a>
+    <input id="q" placeholder="Filter by name or character">
+  </div>
+
+  <div id="grid"></div>
+
+  <div id="info">
+    <span id="big"></span>
+    <div id="txt"></div>
+    <button class="btn" id="copy" type="button">Copy CSS</button>
+  </div>
+
+  <div class="tester">
+    <input id="in" placeholder="Type to preview in the selected font">
+    <div id="test"></div>
+  </div>
+
+  <p class="visit">
+    Visit
+    <a href="https://github.com/cardhollow/font-icon/" target="_blank" rel="noopener">https://github.com/cardhollow/font-icon/</a>
+    to view fonts
+  </p>
+
+  <script>
+    // c = keyboard character, n = icon name, s = original SVG file
+    // MAPPING ONLY
+    var FONTS = [
+      {
+        family: "CHXD Bags and Storage",
+        file: "bags_and_storage.ttf",
+        glyphs: [
+          { c: "B", n: "bag-open" },
+          { c: "K", n: "backpack-open" },
+          { c: "b", n: "bag" },
+          { c: "c", n: "briefcase" },
+          { c: "d", n: "hard-drive" },
+          { c: "f", n: "file-cabinet" },
+          { c: "h", n: "chest" },
+          { c: "i", n: "inventory" },
+          { c: "k", n: "backpack" },
+          { c: "l", n: "locker" },
+          { c: "s", n: "shopping-cart" },
+          { c: "u", n: "suitcase" },
+          { c: "w", n: "wallet" },
+          { c: "x", n: "box-open" }
+        ]
+      },
+      {
+        family: "CHXD Code Editor",
+        file: "code_editor.ttf",
+        glyphs: [
+          { c: "!", n: "diff" },
+          { c: "$", n: "command" },
+          { c: "*", n: "regex" },
+          { c: "+", n: "unfold" },
+          { c: "-", n: "fold" },
+          { c: ".", n: "breakpoint" },
+          { c: "=", n: "compare" },
+          { c: ">", n: "console" },
+          { c: "B", n: "build" },
+          { c: "C", n: "code-block" },
+          { c: "F", n: "format-code" },
+          { c: "K", n: "keyboard-shortcuts" },
+          { c: "M", n: "merge" },
+          { c: "O", n: "step-out" },
+          { c: "P", n: "pull-request" },
+          { c: "S", n: "server" },
+          { c: "T", n: "test-flask" },
+          { c: "U", n: "cpu" },
+          { c: "Y", n: "branch" },
+          { c: "[", n: "brackets" },
+          { c: "b", n: "bug" },
+          { c: "c", n: "code" },
+          { c: "d", n: "debug" },
+          { c: "e", n: "extensions" },
+          { c: "f", n: "function" },
+          { c: "g", n: "git" },
+          { c: "i", n: "step-into" },
+          { c: "j", n: "source-file" },
+          { c: "k", n: "fork" },
+          { c: "l", n: "pull" },
+          { c: "o", n: "commit" },
+          { c: "p", n: "pause" },
+          { c: "r", n: "run" },
+          { c: "s", n: "stop" },
+          { c: "t", n: "terminal" },
+          { c: "u", n: "push" },
+          { c: "v", n: "step-over" },
+          { c: "x", n: "variable" },
+          { c: "y", n: "syntax" },
+          { c: "{", n: "curly-braces" }
+        ]
+      },
+      {
+        family: "CHXD Design Tools",
+        file: "design_tools.ttf",
+        glyphs: [
+          { c: "#", n: "grid-lines" },
+          { c: "+", n: "crosshair" },
+          { c: "-", n: "align-objects-middle" },
+          { c: "5", n: "pentagon" },
+          { c: "B", n: "bring-to-front" },
+          { c: "F", n: "flip-vertical" },
+          { c: "G", n: "group-objects" },
+          { c: "H", n: "distribute-horizontal" },
+          { c: "P", n: "pen-tool" },
+          { c: "R", n: "rotate-left" },
+          { c: "S", n: "send-to-back" },
+          { c: "T", n: "text-box" },
+          { c: "V", n: "distribute-vertical" },
+          { c: "[", n: "align-objects-left" },
+          { c: "]", n: "align-objects-right" },
+          { c: "^", n: "align-objects-top" },
+          { c: "_", n: "align-objects-bottom" },
+          { c: "a", n: "arrow-line" },
+          { c: "c", n: "pointer-click" },
+          { c: "e", n: "ellipse" },
+          { c: "f", n: "fill-bucket" },
+          { c: "g", n: "grab" },
+          { c: "i", n: "eyedropper" },
+          { c: "l", n: "line" },
+          { c: "p", n: "pan" },
+          { c: "r", n: "rectangle" },
+          { c: "t", n: "triangle" },
+          { c: "|", n: "align-objects-center" },
+          { c: "~", n: "lasso" }
+        ]
+      },
+      {
+        family: "CHXD Documents and Media",
+        file: "documents_and_media.ttf",
+        glyphs: [
+          { c: "@", n: "attachment" },
+          { c: "P", n: "print" },
+          { c: "S", n: "slideshow" },
+          { c: "a", n: "audio" },
+          { c: "c", n: "image-crop" },
+          { c: "d", n: "document" },
+          { c: "f", n: "flip" },
+          { c: "g", n: "gallery" },
+          { c: "i", n: "image" },
+          { c: "l", n: "layers" },
+          { c: "o", n: "preview" },
+          { c: "p", n: "pdf" },
+          { c: "r", n: "rotate" },
+          { c: "s", n: "share" },
+          { c: "v", n: "video" },
+          { c: "z", n: "image-resize" }
+        ]
+      },
+      {
+        family: "CHXD Editing",
+        file: "editing.ttf",
+        glyphs: [
+          { c: "+", n: "zoom-in" },
+          { c: "-", n: "zoom-out" },
+          { c: "/", n: "search" },
+          { c: "<", n: "collapse" },
+          { c: ">", n: "expand" },
+          { c: "A", n: "deselect" },
+          { c: "C", n: "clear" },
+          { c: "D", n: "duplicate" },
+          { c: "M", n: "move" },
+          { c: "X", n: "remove" },
+          { c: "a", n: "select-all" },
+          { c: "c", n: "copy" },
+          { c: "d", n: "delete" },
+          { c: "e", n: "edit" },
+          { c: "f", n: "find" },
+          { c: "m", n: "marquee-select" },
+          { c: "n", n: "rename" },
+          { c: "r", n: "replace" },
+          { c: "s", n: "select" },
+          { c: "v", n: "paste" },
+          { c: "x", n: "cut" },
+          { c: "y", n: "redo" },
+          { c: "z", n: "undo" }
+        ]
+      },
+      {
+        family: "CHXD File Management",
+        file: "file_management.ttf",
+        glyphs: [
+          { c: "!", n: "file-warning" },
+          { c: "#", n: "file-spreadsheet" },
+          { c: "+", n: "file-plus" },
+          { c: "-", n: "file-minus" },
+          { c: "/", n: "folder-search" },
+          { c: "=", n: "folder-plus" },
+          { c: ">", n: "file-tree" },
+          { c: "?", n: "file-search" },
+          { c: "C", n: "cloud-download" },
+          { c: "D", n: "folder-download" },
+          { c: "F", n: "folder" },
+          { c: "L", n: "folder-lock" },
+          { c: "N", n: "new-folder" },
+          { c: "S", n: "folder-settings" },
+          { c: "T", n: "empty-trash" },
+          { c: "U", n: "folder-upload" },
+          { c: "V", n: "folder-check" },
+          { c: "_", n: "folder-minus" },
+          { c: "a", n: "archive" },
+          { c: "c", n: "close-folder" },
+          { c: "e", n: "file-edit" },
+          { c: "f", n: "file" },
+          { c: "i", n: "file-info" },
+          { c: "k", n: "scan" },
+          { c: "l", n: "file-lock" },
+          { c: "m", n: "multiple-files" },
+          { c: "n", n: "new-file" },
+          { c: "o", n: "open-folder" },
+          { c: "q", n: "file-question" },
+          { c: "r", n: "trash-restore" },
+          { c: "s", n: "file-settings" },
+          { c: "t", n: "trash" },
+          { c: "u", n: "file-upload" },
+          { c: "v", n: "file-check" },
+          { c: "x", n: "extract" },
+          { c: "z", n: "file-archive" }
+        ]
+      },
+      {
+        family: "CHXD File Operations",
+        file: "file_operations.ttf",
+        glyphs: [
+          { c: "R", n: "recent-files" },
+          { c: "S", n: "save-as" },
+          { c: "a", n: "autosave" },
+          { c: "b", n: "backup" },
+          { c: "d", n: "download" },
+          { c: "e", n: "export" },
+          { c: "h", n: "history" },
+          { c: "i", n: "import" },
+          { c: "l", n: "load" },
+          { c: "o", n: "open" },
+          { c: "r", n: "refresh" },
+          { c: "s", n: "save" },
+          { c: "t", n: "restore" },
+          { c: "u", n: "upload" },
+          { c: "v", n: "recover" },
+          { c: "y", n: "sync" }
+        ]
+      },
+      {
+        family: "CHXD Media",
+        file: "media.ttf",
+        glyphs: [
+          { c: "!", n: "contrast" },
+          { c: "-", n: "volume-low" },
+          { c: "0", n: "volume-off" },
+          { c: "<", n: "rewind" },
+          { c: ">", n: "fast-forward" },
+          { c: "A", n: "video-add" },
+          { c: "C", n: "camera-off" },
+          { c: "F", n: "file-audio" },
+          { c: "I", n: "file-image" },
+          { c: "M", n: "microphone" },
+          { c: "N", n: "microphone-off" },
+          { c: "O", n: "video-off" },
+          { c: "P", n: "play-circle" },
+          { c: "R", n: "repeat" },
+          { c: "S", n: "shuffle" },
+          { c: "T", n: "trim-clip" },
+          { c: "V", n: "file-video" },
+          { c: "a", n: "image-minus" },
+          { c: "c", n: "camera" },
+          { c: "d", n: "monitor" },
+          { c: "e", n: "eject" },
+          { c: "f", n: "film-strip" },
+          { c: "g", n: "image-plus" },
+          { c: "h", n: "headphones" },
+          { c: "i", n: "droplet" },
+          { c: "k", n: "cast" },
+          { c: "l", n: "playlist" },
+          { c: "m", n: "mute" },
+          { c: "n", n: "picture-in-picture" },
+          { c: "o", n: "photo" },
+          { c: "p", n: "pause-circle" },
+          { c: "q", n: "equalizer" },
+          { c: "r", n: "record" },
+          { c: "s", n: "stop-circle" },
+          { c: "t", n: "subtitles" },
+          { c: "u", n: "unmute" },
+          { c: "v", n: "speaker" },
+          { c: "w", n: "audio-waveform" },
+          { c: "x", n: "screenshot" },
+          { c: "y", n: "playback-speed" }
+        ]
+      },
+      {
+        family: "CHXD Miscellaneous",
+        file: "miscellaneous.ttf",
+        glyphs: [
+          { c: "!", n: "zap" },
+          { c: "#", n: "hash" },
+          { c: "$", n: "ruler" },
+          { c: "%", n: "pie-chart" },
+          { c: "&", n: "send" },
+          { c: "*", n: "star" },
+          { c: "+", n: "plus" },
+          { c: "-", n: "minus" },
+          { c: "/", n: "line-chart" },
+          { c: ">", n: "external-link" },
+          { c: "@", n: "at-sign" },
+          { c: "A", n: "loader" },
+          { c: "B", n: "battery" },
+          { c: "C", n: "cloud" },
+          { c: "D", n: "database" },
+          { c: "E", n: "palette" },
+          { c: "H", n: "highlighter" },
+          { c: "I", n: "inbox" },
+          { c: "K", n: "package" },
+          { c: "L", n: "laptop" },
+          { c: "N", n: "moon" },
+          { c: "O", n: "power" },
+          { c: "P", n: "pin" },
+          { c: "R", n: "reply" },
+          { c: "S", n: "shield" },
+          { c: "T", n: "smartphone" },
+          { c: "U", n: "users" },
+          { c: "W", n: "window" },
+          { c: "[", n: "minimize" },
+          { c: "]", n: "maximize" },
+          { c: "a", n: "tag" },
+          { c: "b", n: "bookmark" },
+          { c: "c", n: "calendar" },
+          { c: "d", n: "clipboard" },
+          { c: "e", n: "credit-card" },
+          { c: "f", n: "flag" },
+          { c: "g", n: "globe" },
+          { c: "h", n: "home" },
+          { c: "i", n: "lightbulb" },
+          { c: "k", n: "key" },
+          { c: "l", n: "heart" },
+          { c: "m", n: "mail" },
+          { c: "n", n: "sun" },
+          { c: "o", n: "clock" },
+          { c: "p", n: "map-pin" },
+          { c: "q", n: "qr-code" },
+          { c: "r", n: "wrench" },
+          { c: "s", n: "paintbrush" },
+          { c: "t", n: "phone" },
+          { c: "u", n: "user" },
+          { c: "v", n: "split-vertical" },
+          { c: "w", n: "wifi" },
+          { c: "y", n: "thumbs-up" },
+          { c: "z", n: "split-horizontal" },
+          { c: "|", n: "bar-chart" }
+        ]
+      },
+      {
+        family: "CHXD Navigation",
+        file: "navigation.ttf",
+        glyphs: [
+          { c: "(", n: "first-page" },
+          { c: ")", n: "last-page" },
+          { c: "<", n: "left" },
+          { c: ">", n: "right" },
+          { c: "D", n: "arrow-down-left" },
+          { c: "U", n: "arrow-up-right" },
+          { c: "[", n: "back" },
+          { c: "]", n: "forward" },
+          { c: "^", n: "up" },
+          { c: "b", n: "scroll-to-bottom" },
+          { c: "d", n: "arrow-down" },
+          { c: "i", n: "login" },
+          { c: "l", n: "chevrons-left" },
+          { c: "o", n: "logout" },
+          { c: "r", n: "chevrons-right" },
+          { c: "t", n: "scroll-to-top" },
+          { c: "u", n: "arrow-up" },
+          { c: "v", n: "down" },
+          { c: "{", n: "previous" },
+          { c: "}", n: "next" }
+        ]
+      },
+      {
+        family: "CHXD Sorting and Views",
+        file: "sorting_and_views.ttf",
+        glyphs: [
+          { c: "-", n: "rows" },
+          { c: ":", n: "drag-handle" },
+          { c: "=", n: "chevrons-up-down" },
+          { c: "C", n: "compact-view" },
+          { c: "D", n: "details-view" },
+          { c: "G", n: "grid-small" },
+          { c: "^", n: "sort-ascending" },
+          { c: "a", n: "sort-az" },
+          { c: "c", n: "card-view" },
+          { c: "d", n: "sort-by-date" },
+          { c: "g", n: "group-by" },
+          { c: "k", n: "kanban-board" },
+          { c: "s", n: "sort-by-size" },
+          { c: "v", n: "sort-descending" },
+          { c: "z", n: "sort-za" },
+          { c: "|", n: "columns" }
+        ]
+      },
+      {
+        family: "CHXD Text Editor",
+        file: "text_editor.ttf",
+        glyphs: [
+          { c: "#", n: "numbered-list" },
+          { c: "'", n: "quote" },
+          { c: "*", n: "bullet-list" },
+          { c: "-", n: "horizontal-rule" },
+          { c: "<", n: "outdent" },
+          { c: ">", n: "indent" },
+          { c: "?", n: "spell-check" },
+          { c: "A", n: "table-column-add" },
+          { c: "B", n: "page-break" },
+          { c: "C", n: "text-color" },
+          { c: "E", n: "exit-fullscreen" },
+          { c: "F", n: "fullscreen" },
+          { c: "H", n: "heading" },
+          { c: "K", n: "unlink" },
+          { c: "P", n: "page-footer" },
+          { c: "R", n: "table-row-add" },
+          { c: "T", n: "text" },
+          { c: "X", n: "clear-formatting" },
+          { c: "^", n: "superscript" },
+          { c: "_", n: "subscript" },
+          { c: "a", n: "page-header" },
+          { c: "b", n: "bold" },
+          { c: "c", n: "align-center" },
+          { c: "h", n: "line-height" },
+          { c: "i", n: "italic" },
+          { c: "j", n: "align-justify" },
+          { c: "k", n: "link" },
+          { c: "l", n: "align-left" },
+          { c: "m", n: "comment" },
+          { c: "p", n: "paragraph" },
+          { c: "r", n: "align-right" },
+          { c: "s", n: "strikethrough" },
+          { c: "t", n: "table" },
+          { c: "u", n: "underline" },
+          { c: "w", n: "word-wrap" },
+          { c: "x", n: "checklist" },
+          { c: "z", n: "font-size" },
+          { c: "|", n: "text-cursor" }
+        ]
+      },
+      {
+        family: "CHXD UI Controls",
+        file: "ui_controls.ttf",
+        glyphs: [
+          { c: "!", n: "error-circle" },
+          { c: "%", n: "progress" },
+          { c: "+", n: "add-circle" },
+          { c: "-", n: "checkbox-mixed" },
+          { c: ".", n: "more" },
+          { c: "1", n: "list-view" },
+          { c: "2", n: "grid-view" },
+          { c: ":", n: "more-horizontal" },
+          { c: ";", n: "more-vertical" },
+          { c: "=", n: "slider" },
+          { c: "?", n: "help" },
+          { c: "E", n: "eye-off" },
+          { c: "H", n: "shield-check" },
+          { c: "L", n: "unlock" },
+          { c: "N", n: "notifications-off" },
+          { c: "O", n: "checkbox-checked" },
+          { c: "R", n: "radio-selected" },
+          { c: "S", n: "sort" },
+          { c: "T", n: "toggle-on" },
+          { c: "V", n: "check-circle" },
+          { c: "W", n: "warning" },
+          { c: "[", n: "sidebar" },
+          { c: "]", n: "sidebar-right" },
+          { c: "_", n: "panel" },
+          { c: "d", n: "dashboard" },
+          { c: "e", n: "eye" },
+          { c: "f", n: "filter" },
+          { c: "i", n: "information" },
+          { c: "l", n: "lock" },
+          { c: "m", n: "menu" },
+          { c: "n", n: "notifications" },
+          { c: "o", n: "checkbox" },
+          { c: "p", n: "preferences" },
+          { c: "r", n: "radio" },
+          { c: "s", n: "settings" },
+          { c: "t", n: "toggle-off" },
+          { c: "u", n: "dropdown" },
+          { c: "v", n: "check" },
+          { c: "x", n: "close" }
+        ]
+      }
+    ];
+
+    var current = "all";
+    var selected = null;
+    var previewFont = 0;
+
+    function $(id) {
+      return document.getElementById(id);
+    }
+
+    function family(index) {
+      return '"' + FONTS[index].family + '"';
+    }
+
+    function visibleFonts() {
+      if (current === "all") {
+        return FONTS.map(function (font, i) {
+          return i;
+        });
+      }
+      return [current];
+    }
+
+    function buildCss(fontIndex, glyph) {
+      var hex = glyph.c.charCodeAt(0).toString(16);
+      return [
+        '@font-face {',
+        '  font-family: ' + family(fontIndex) + ';',
+        '  src: url("fonts/' + FONTS[fontIndex].file + '") format("truetype");',
+        '}',
+        '',
+        '.icon-' + glyph.n + '::before {',
+        '  font-family: ' + family(fontIndex) + ';',
+        '  content: "\\' + hex + '";',
+        '}'
+      ].join('\n');
+    }
+
+    function updateDownload() {
+      var link = $("dl");
+      var file = current === "all" ? "IconFonts.zip" : FONTS[current].file;
+      link.href = "fonts/" + file;
+      link.setAttribute("download", file);
+      link.textContent = current === "all" ? "Download .zip" : "Download .ttf";
+    }
+
+    function fillFamilies() {
+      var all = document.createElement("option");
+      all.value = "all";
+      all.textContent = "All (" + FONTS.length + " fonts)";
+      $("fam").appendChild(all);
+
+      FONTS.forEach(function (font, i) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.textContent = font.family + " (" + font.glyphs.length + ")";
+        $("fam").appendChild(option);
+      });
+    }
+
+    function drawGrid() {
+      var query = $("q").value.toLowerCase();
+      var root = $("grid");
+      root.textContent = "";
+
+      visibleFonts().forEach(function (fontIndex) {
+        var font = FONTS[fontIndex];
+        var group = document.createElement("section");
+        group.className = "group";
+
+        if (current === "all") {
+          var title = document.createElement("h2");
+          title.textContent = font.family;
+          group.appendChild(title);
+        }
+
+        var grid = document.createElement("div");
+        grid.className = "grid";
+
+        font.glyphs.forEach(function (glyph) {
+          var matches = !query || glyph.n.indexOf(query) >= 0 || glyph.c === $("q").value;
+          if (!matches) {
+            return;
+          }
+
+          var cell = document.createElement("button");
+          cell.type = "button";
+          var isSelected = selected && selected.font === fontIndex && selected.glyph.c === glyph.c;
+          cell.className = "cell" + (isSelected ? " on" : "");
+          cell.title = glyph.n;
+
+          var key = document.createElement("span");
+          key.className = "key";
+          key.textContent = glyph.c;
+
+          var icon = document.createElement("span");
+          icon.textContent = glyph.c;
+          icon.style.fontFamily = family(fontIndex);
+
+          cell.append(key, icon);
+          cell.onclick = function () {
+            selected = { font: fontIndex, glyph: glyph };
+            previewFont = fontIndex;
+            drawGrid();
+            drawInfo();
+          };
+          grid.appendChild(cell);
+        });
+
+        if (grid.children.length > 0) {
+          group.appendChild(grid);
+          root.appendChild(group);
+        }
+      });
+
+      $("test").style.fontFamily = family(previewFont);
+      $("test").textContent = $("in").value;
+    }
+
+    function drawInfo() {
+      var info = $("info");
+      if (!selected) {
+        info.className = "";
+        return;
+      }
+      info.className = "show";
+
+      $("big").style.fontFamily = family(selected.font);
+      $("big").textContent = selected.glyph.c;
+
+      var name = document.createElement("b");
+      name.textContent = selected.glyph.n + "  [" + selected.glyph.c + "]";
+
+      var detail = document.createElement("small");
+      detail.textContent = FONTS[selected.font].family;
+
+      $("txt").textContent = "";
+      $("txt").append(name, detail);
+    }
+
+    function copyText(text, done) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done);
+        return;
+      }
+      var box = document.createElement("textarea");
+      box.value = text;
+      document.body.appendChild(box);
+      box.select();
+      document.execCommand("copy");
+      box.remove();
+      done();
+    }
+
+    $("fam").onchange = function () {
+      current = $("fam").value === "all" ? "all" : Number($("fam").value);
+      selected = null;
+      previewFont = current === "all" ? 0 : current;
+      updateDownload();
+      drawInfo();
+      drawGrid();
+    };
+
+    $("q").oninput = drawGrid;
+    $("in").oninput = drawGrid;
+
+    $("copy").onclick = function () {
+      var button = $("copy");
+      copyText(buildCss(selected.font, selected.glyph), function () {
+        button.textContent = "Copied";
+        setTimeout(function () {
+          button.textContent = "Copy CSS";
+        }, 1200);
+      });
+    };
+
+    fillFamilies();
+    updateDownload();
+    drawGrid();
+  </script>
+</body>
+
+</html>
