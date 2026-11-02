@@ -89,20 +89,97 @@ For ordinary text, switch back to your usual font.
 
 ---
 # CSS IMPORT
-```css sample
-   @font-face { font-family: "CHXD Bags and Storage"; src: url("fonts/bags_and_storage.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/bags_and_storage.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Code Editor"; src: url("fonts/code_editor.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/code_editor.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Design Tools"; src: url("fonts/design_tools.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/design_tools.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Documents and Media"; src: url("fonts/documents_and_media.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/documents_and_media.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Editing"; src: url("fonts/editing.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/editing.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD File Management"; src: url("fonts/file_management.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/file_management.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD File Operations"; src: url("fonts/file_operations.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/file_operations.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Media"; src: url("fonts/media.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/media.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Miscellaneous"; src: url("fonts/miscellaneous.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/miscellaneous.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Navigation"; src: url("fonts/navigation.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/navigation.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Sorting and Views"; src: url("fonts/sorting_and_views.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/sorting_and_views.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD Text Editor"; src: url("fonts/text_editor.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/text_editor.ttf") format("truetype"); font-display: swap; }
-    @font-face { font-family: "CHXD UI Controls"; src: url("fonts/ui_controls.ttf") format("truetype"), url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/ui_controls.ttf") format("truetype"); font-display: swap; }
+```css
+@font-face {
+    font-family: "CHXD Bags and Storage";
+    src: url("fonts/bags_and_storage.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/bags_and_storage.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Code Editor";
+    src: url("fonts/code_editor.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/code_editor.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Design Tools";
+    src: url("fonts/design_tools.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/design_tools.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Documents and Media";
+    src: url("fonts/documents_and_media.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/documents_and_media.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Editing";
+    src: url("fonts/editing.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/editing.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD File Management";
+    src: url("fonts/file_management.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/file_management.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD File Operations";
+    src: url("fonts/file_operations.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/file_operations.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Media";
+    src: url("fonts/media.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/media.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Miscellaneous";
+    src: url("fonts/miscellaneous.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/miscellaneous.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Navigation";
+    src: url("fonts/navigation.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/navigation.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Sorting and Views";
+    src: url("fonts/sorting_and_views.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/sorting_and_views.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Text Editor";
+    src: url("fonts/text_editor.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/text_editor.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD UI Controls";
+    src: url("fonts/ui_controls.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/ui_controls.ttf") format("truetype");
+    font-display: swap;
+}
 ```
 ---
 
