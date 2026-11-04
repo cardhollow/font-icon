@@ -1,0 +1,660 @@
+@font-face { font-family: "CHXD Bags and Storage"; src: url("fonts/bags_and_storage.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Code Editor"; src: url("fonts/code_editor.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Design Tools"; src: url("fonts/design_tools.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Documents and Media"; src: url("fonts/documents_and_media.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Editing"; src: url("fonts/editing.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD File Management"; src: url("fonts/file_management.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD File Operations"; src: url("fonts/file_operations.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Media"; src: url("fonts/media.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Miscellaneous"; src: url("fonts/miscellaneous.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Navigation"; src: url("fonts/navigation.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Sorting and Views"; src: url("fonts/sorting_and_views.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Text Editor"; src: url("fonts/text_editor.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD UI Controls"; src: url("fonts/ui_controls.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Travel and Places"; src: url("fonts/travel_and_places.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Documents and Reading"; src: url("fonts/documents_and_reading.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Reactions and Emoji"; src: url("fonts/reactions_and_emoji.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Health and Care"; src: url("fonts/health_and_care.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Games and Fun"; src: url("fonts/games_and_fun.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD People and Identity"; src: url("fonts/people_and_identity.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Language and Input"; src: url("fonts/language_and_input.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Device and System"; src: url("fonts/device_and_system.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Apps and Utilities"; src: url("fonts/apps_and_utilities.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Weather and Nature"; src: url("fonts/weather_and_nature.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Web and Connectivity"; src: url("fonts/web_and_connectivity.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Social and Communication"; src: url("fonts/social_and_communication.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Media and Content"; src: url("fonts/media_and_content.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Social Media"; src: url("fonts/social_media.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "CHXD Apps and Services"; src: url("fonts/apps_and_services.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+.icon-bag-open::before { font-family: "CHXD Bags and Storage"; content: "\\42"; }
+.icon-backpack-open::before { font-family: "CHXD Bags and Storage"; content: "\\4B"; }
+.icon-bag::before { font-family: "CHXD Bags and Storage"; content: "\\62"; }
+.icon-briefcase::before { font-family: "CHXD Bags and Storage"; content: "\\63"; }
+.icon-hard-drive::before { font-family: "CHXD Bags and Storage"; content: "\\64"; }
+.icon-file-cabinet::before { font-family: "CHXD Bags and Storage"; content: "\\66"; }
+.icon-chest::before { font-family: "CHXD Bags and Storage"; content: "\\68"; }
+.icon-inventory::before { font-family: "CHXD Bags and Storage"; content: "\\69"; }
+.icon-backpack::before { font-family: "CHXD Bags and Storage"; content: "\\6B"; }
+.icon-locker::before { font-family: "CHXD Bags and Storage"; content: "\\6C"; }
+.icon-shopping-cart::before { font-family: "CHXD Bags and Storage"; content: "\\73"; }
+.icon-suitcase::before { font-family: "CHXD Bags and Storage"; content: "\\75"; }
+.icon-wallet::before { font-family: "CHXD Bags and Storage"; content: "\\77"; }
+.icon-box-open::before { font-family: "CHXD Bags and Storage"; content: "\\78"; }
+.icon-diff::before { font-family: "CHXD Code Editor"; content: "\\21"; }
+.icon-command::before { font-family: "CHXD Code Editor"; content: "\\24"; }
+.icon-regex::before { font-family: "CHXD Code Editor"; content: "\\2A"; }
+.icon-unfold::before { font-family: "CHXD Code Editor"; content: "\\2B"; }
+.icon-fold::before { font-family: "CHXD Code Editor"; content: "\\2D"; }
+.icon-breakpoint::before { font-family: "CHXD Code Editor"; content: "\\2E"; }
+.icon-compare::before { font-family: "CHXD Code Editor"; content: "\\3D"; }
+.icon-console::before { font-family: "CHXD Code Editor"; content: "\\3E"; }
+.icon-build::before { font-family: "CHXD Code Editor"; content: "\\42"; }
+.icon-code-block::before { font-family: "CHXD Code Editor"; content: "\\43"; }
+.icon-format-code::before { font-family: "CHXD Code Editor"; content: "\\46"; }
+.icon-keyboard-shortcuts::before { font-family: "CHXD Code Editor"; content: "\\4B"; }
+.icon-merge::before { font-family: "CHXD Code Editor"; content: "\\4D"; }
+.icon-step-out::before { font-family: "CHXD Code Editor"; content: "\\4F"; }
+.icon-pull-request::before { font-family: "CHXD Code Editor"; content: "\\50"; }
+.icon-server::before { font-family: "CHXD Code Editor"; content: "\\53"; }
+.icon-test-flask::before { font-family: "CHXD Code Editor"; content: "\\54"; }
+.icon-cpu::before { font-family: "CHXD Code Editor"; content: "\\55"; }
+.icon-branch::before { font-family: "CHXD Code Editor"; content: "\\59"; }
+.icon-brackets::before { font-family: "CHXD Code Editor"; content: "\\5B"; }
+.icon-bug::before { font-family: "CHXD Code Editor"; content: "\\62"; }
+.icon-code::before { font-family: "CHXD Code Editor"; content: "\\63"; }
+.icon-debug::before { font-family: "CHXD Code Editor"; content: "\\64"; }
+.icon-extensions::before { font-family: "CHXD Code Editor"; content: "\\65"; }
+.icon-function::before { font-family: "CHXD Code Editor"; content: "\\66"; }
+.icon-git::before { font-family: "CHXD Code Editor"; content: "\\67"; }
+.icon-step-into::before { font-family: "CHXD Code Editor"; content: "\\69"; }
+.icon-source-file::before { font-family: "CHXD Code Editor"; content: "\\6A"; }
+.icon-fork::before { font-family: "CHXD Code Editor"; content: "\\6B"; }
+.icon-pull::before { font-family: "CHXD Code Editor"; content: "\\6C"; }
+.icon-commit::before { font-family: "CHXD Code Editor"; content: "\\6F"; }
+.icon-pause::before { font-family: "CHXD Code Editor"; content: "\\70"; }
+.icon-run::before { font-family: "CHXD Code Editor"; content: "\\72"; }
+.icon-stop::before { font-family: "CHXD Code Editor"; content: "\\73"; }
+.icon-terminal::before { font-family: "CHXD Code Editor"; content: "\\74"; }
+.icon-push::before { font-family: "CHXD Code Editor"; content: "\\75"; }
+.icon-step-over::before { font-family: "CHXD Code Editor"; content: "\\76"; }
+.icon-variable::before { font-family: "CHXD Code Editor"; content: "\\78"; }
+.icon-syntax::before { font-family: "CHXD Code Editor"; content: "\\79"; }
+.icon-curly-braces::before { font-family: "CHXD Code Editor"; content: "\\7B"; }
+.icon-grid-lines::before { font-family: "CHXD Design Tools"; content: "\\23"; }
+.icon-crosshair::before { font-family: "CHXD Design Tools"; content: "\\2B"; }
+.icon-align-objects-middle::before { font-family: "CHXD Design Tools"; content: "\\2D"; }
+.icon-pentagon::before { font-family: "CHXD Design Tools"; content: "\\35"; }
+.icon-bring-to-front::before { font-family: "CHXD Design Tools"; content: "\\42"; }
+.icon-flip-vertical::before { font-family: "CHXD Design Tools"; content: "\\46"; }
+.icon-group-objects::before { font-family: "CHXD Design Tools"; content: "\\47"; }
+.icon-distribute-horizontal::before { font-family: "CHXD Design Tools"; content: "\\48"; }
+.icon-pen-tool::before { font-family: "CHXD Design Tools"; content: "\\50"; }
+.icon-rotate-left::before { font-family: "CHXD Design Tools"; content: "\\52"; }
+.icon-send-to-back::before { font-family: "CHXD Design Tools"; content: "\\53"; }
+.icon-text-box::before { font-family: "CHXD Design Tools"; content: "\\54"; }
+.icon-distribute-vertical::before { font-family: "CHXD Design Tools"; content: "\\56"; }
+.icon-align-objects-left::before { font-family: "CHXD Design Tools"; content: "\\5B"; }
+.icon-align-objects-right::before { font-family: "CHXD Design Tools"; content: "\\5D"; }
+.icon-align-objects-top::before { font-family: "CHXD Design Tools"; content: "\\5E"; }
+.icon-align-objects-bottom::before { font-family: "CHXD Design Tools"; content: "\\5F"; }
+.icon-arrow-line::before { font-family: "CHXD Design Tools"; content: "\\61"; }
+.icon-pointer-click::before { font-family: "CHXD Design Tools"; content: "\\63"; }
+.icon-ellipse::before { font-family: "CHXD Design Tools"; content: "\\65"; }
+.icon-fill-bucket::before { font-family: "CHXD Design Tools"; content: "\\66"; }
+.icon-grab::before { font-family: "CHXD Design Tools"; content: "\\67"; }
+.icon-eyedropper::before { font-family: "CHXD Design Tools"; content: "\\69"; }
+.icon-line::before { font-family: "CHXD Design Tools"; content: "\\6C"; }
+.icon-pan::before { font-family: "CHXD Design Tools"; content: "\\70"; }
+.icon-rectangle::before { font-family: "CHXD Design Tools"; content: "\\72"; }
+.icon-triangle::before { font-family: "CHXD Design Tools"; content: "\\74"; }
+.icon-align-objects-center::before { font-family: "CHXD Design Tools"; content: "\\7C"; }
+.icon-lasso::before { font-family: "CHXD Design Tools"; content: "\\7E"; }
+.icon-attachment::before { font-family: "CHXD Documents and Media"; content: "\\40"; }
+.icon-print::before { font-family: "CHXD Documents and Media"; content: "\\50"; }
+.icon-slideshow::before { font-family: "CHXD Documents and Media"; content: "\\53"; }
+.icon-audio::before { font-family: "CHXD Documents and Media"; content: "\\61"; }
+.icon-image-crop::before { font-family: "CHXD Documents and Media"; content: "\\63"; }
+.icon-document::before { font-family: "CHXD Documents and Media"; content: "\\64"; }
+.icon-flip::before { font-family: "CHXD Documents and Media"; content: "\\66"; }
+.icon-gallery::before { font-family: "CHXD Documents and Media"; content: "\\67"; }
+.icon-image::before { font-family: "CHXD Documents and Media"; content: "\\69"; }
+.icon-layers::before { font-family: "CHXD Documents and Media"; content: "\\6C"; }
+.icon-preview::before { font-family: "CHXD Documents and Media"; content: "\\6F"; }
+.icon-pdf::before { font-family: "CHXD Documents and Media"; content: "\\70"; }
+.icon-rotate::before { font-family: "CHXD Documents and Media"; content: "\\72"; }
+.icon-share::before { font-family: "CHXD Documents and Media"; content: "\\73"; }
+.icon-video::before { font-family: "CHXD Documents and Media"; content: "\\76"; }
+.icon-image-resize::before { font-family: "CHXD Documents and Media"; content: "\\7A"; }
+.icon-zoom-in::before { font-family: "CHXD Editing"; content: "\\2B"; }
+.icon-zoom-out::before { font-family: "CHXD Editing"; content: "\\2D"; }
+.icon-search::before { font-family: "CHXD Editing"; content: "\\2F"; }
+.icon-collapse::before { font-family: "CHXD Editing"; content: "\\3C"; }
+.icon-expand::before { font-family: "CHXD Editing"; content: "\\3E"; }
+.icon-deselect::before { font-family: "CHXD Editing"; content: "\\41"; }
+.icon-clear::before { font-family: "CHXD Editing"; content: "\\43"; }
+.icon-duplicate::before { font-family: "CHXD Editing"; content: "\\44"; }
+.icon-move::before { font-family: "CHXD Editing"; content: "\\4D"; }
+.icon-remove::before { font-family: "CHXD Editing"; content: "\\58"; }
+.icon-select-all::before { font-family: "CHXD Editing"; content: "\\61"; }
+.icon-copy::before { font-family: "CHXD Editing"; content: "\\63"; }
+.icon-delete::before { font-family: "CHXD Editing"; content: "\\64"; }
+.icon-edit::before { font-family: "CHXD Editing"; content: "\\65"; }
+.icon-find::before { font-family: "CHXD Editing"; content: "\\66"; }
+.icon-marquee-select::before { font-family: "CHXD Editing"; content: "\\6D"; }
+.icon-rename::before { font-family: "CHXD Editing"; content: "\\6E"; }
+.icon-replace::before { font-family: "CHXD Editing"; content: "\\72"; }
+.icon-select::before { font-family: "CHXD Editing"; content: "\\73"; }
+.icon-paste::before { font-family: "CHXD Editing"; content: "\\76"; }
+.icon-cut::before { font-family: "CHXD Editing"; content: "\\78"; }
+.icon-redo::before { font-family: "CHXD Editing"; content: "\\79"; }
+.icon-undo::before { font-family: "CHXD Editing"; content: "\\7A"; }
+.icon-file-warning::before { font-family: "CHXD File Management"; content: "\\21"; }
+.icon-file-spreadsheet::before { font-family: "CHXD File Management"; content: "\\23"; }
+.icon-file-plus::before { font-family: "CHXD File Management"; content: "\\2B"; }
+.icon-file-minus::before { font-family: "CHXD File Management"; content: "\\2D"; }
+.icon-folder-search::before { font-family: "CHXD File Management"; content: "\\2F"; }
+.icon-folder-plus::before { font-family: "CHXD File Management"; content: "\\3D"; }
+.icon-file-tree::before { font-family: "CHXD File Management"; content: "\\3E"; }
+.icon-file-search::before { font-family: "CHXD File Management"; content: "\\3F"; }
+.icon-cloud-download::before { font-family: "CHXD File Management"; content: "\\43"; }
+.icon-folder-download::before { font-family: "CHXD File Management"; content: "\\44"; }
+.icon-folder::before { font-family: "CHXD File Management"; content: "\\46"; }
+.icon-folder-lock::before { font-family: "CHXD File Management"; content: "\\4C"; }
+.icon-new-folder::before { font-family: "CHXD File Management"; content: "\\4E"; }
+.icon-folder-settings::before { font-family: "CHXD File Management"; content: "\\53"; }
+.icon-empty-trash::before { font-family: "CHXD File Management"; content: "\\54"; }
+.icon-folder-upload::before { font-family: "CHXD File Management"; content: "\\55"; }
+.icon-folder-check::before { font-family: "CHXD File Management"; content: "\\56"; }
+.icon-folder-minus::before { font-family: "CHXD File Management"; content: "\\5F"; }
+.icon-archive::before { font-family: "CHXD File Management"; content: "\\61"; }
+.icon-close-folder::before { font-family: "CHXD File Management"; content: "\\63"; }
+.icon-file-edit::before { font-family: "CHXD File Management"; content: "\\65"; }
+.icon-file::before { font-family: "CHXD File Management"; content: "\\66"; }
+.icon-file-info::before { font-family: "CHXD File Management"; content: "\\69"; }
+.icon-scan::before { font-family: "CHXD File Management"; content: "\\6B"; }
+.icon-file-lock::before { font-family: "CHXD File Management"; content: "\\6C"; }
+.icon-multiple-files::before { font-family: "CHXD File Management"; content: "\\6D"; }
+.icon-new-file::before { font-family: "CHXD File Management"; content: "\\6E"; }
+.icon-open-folder::before { font-family: "CHXD File Management"; content: "\\6F"; }
+.icon-file-question::before { font-family: "CHXD File Management"; content: "\\71"; }
+.icon-trash-restore::before { font-family: "CHXD File Management"; content: "\\72"; }
+.icon-file-settings::before { font-family: "CHXD File Management"; content: "\\73"; }
+.icon-trash::before { font-family: "CHXD File Management"; content: "\\74"; }
+.icon-file-upload::before { font-family: "CHXD File Management"; content: "\\75"; }
+.icon-file-check::before { font-family: "CHXD File Management"; content: "\\76"; }
+.icon-extract::before { font-family: "CHXD File Management"; content: "\\78"; }
+.icon-file-archive::before { font-family: "CHXD File Management"; content: "\\7A"; }
+.icon-recent-files::before { font-family: "CHXD File Operations"; content: "\\52"; }
+.icon-save-as::before { font-family: "CHXD File Operations"; content: "\\53"; }
+.icon-autosave::before { font-family: "CHXD File Operations"; content: "\\61"; }
+.icon-backup::before { font-family: "CHXD File Operations"; content: "\\62"; }
+.icon-download::before { font-family: "CHXD File Operations"; content: "\\64"; }
+.icon-export::before { font-family: "CHXD File Operations"; content: "\\65"; }
+.icon-history::before { font-family: "CHXD File Operations"; content: "\\68"; }
+.icon-import::before { font-family: "CHXD File Operations"; content: "\\69"; }
+.icon-load::before { font-family: "CHXD File Operations"; content: "\\6C"; }
+.icon-open::before { font-family: "CHXD File Operations"; content: "\\6F"; }
+.icon-refresh::before { font-family: "CHXD File Operations"; content: "\\72"; }
+.icon-save::before { font-family: "CHXD File Operations"; content: "\\73"; }
+.icon-restore::before { font-family: "CHXD File Operations"; content: "\\74"; }
+.icon-upload::before { font-family: "CHXD File Operations"; content: "\\75"; }
+.icon-recover::before { font-family: "CHXD File Operations"; content: "\\76"; }
+.icon-sync::before { font-family: "CHXD File Operations"; content: "\\79"; }
+.icon-contrast::before { font-family: "CHXD Media"; content: "\\21"; }
+.icon-volume-low::before { font-family: "CHXD Media"; content: "\\2D"; }
+.icon-volume-off::before { font-family: "CHXD Media"; content: "\\30"; }
+.icon-rewind::before { font-family: "CHXD Media"; content: "\\3C"; }
+.icon-fast-forward::before { font-family: "CHXD Media"; content: "\\3E"; }
+.icon-video-add::before { font-family: "CHXD Media"; content: "\\41"; }
+.icon-camera-off::before { font-family: "CHXD Media"; content: "\\43"; }
+.icon-file-audio::before { font-family: "CHXD Media"; content: "\\46"; }
+.icon-file-image::before { font-family: "CHXD Media"; content: "\\49"; }
+.icon-microphone::before { font-family: "CHXD Media"; content: "\\4D"; }
+.icon-microphone-off::before { font-family: "CHXD Media"; content: "\\4E"; }
+.icon-video-off::before { font-family: "CHXD Media"; content: "\\4F"; }
+.icon-play-circle::before { font-family: "CHXD Media"; content: "\\50"; }
+.icon-repeat::before { font-family: "CHXD Media"; content: "\\52"; }
+.icon-shuffle::before { font-family: "CHXD Media"; content: "\\53"; }
+.icon-trim-clip::before { font-family: "CHXD Media"; content: "\\54"; }
+.icon-file-video::before { font-family: "CHXD Media"; content: "\\56"; }
+.icon-image-minus::before { font-family: "CHXD Media"; content: "\\61"; }
+.icon-camera::before { font-family: "CHXD Media"; content: "\\63"; }
+.icon-monitor::before { font-family: "CHXD Media"; content: "\\64"; }
+.icon-eject::before { font-family: "CHXD Media"; content: "\\65"; }
+.icon-film-strip::before { font-family: "CHXD Media"; content: "\\66"; }
+.icon-image-plus::before { font-family: "CHXD Media"; content: "\\67"; }
+.icon-headphones::before { font-family: "CHXD Media"; content: "\\68"; }
+.icon-droplet::before { font-family: "CHXD Media"; content: "\\69"; }
+.icon-cast::before { font-family: "CHXD Media"; content: "\\6B"; }
+.icon-playlist::before { font-family: "CHXD Media"; content: "\\6C"; }
+.icon-mute::before { font-family: "CHXD Media"; content: "\\6D"; }
+.icon-picture-in-picture::before { font-family: "CHXD Media"; content: "\\6E"; }
+.icon-photo::before { font-family: "CHXD Media"; content: "\\6F"; }
+.icon-pause-circle::before { font-family: "CHXD Media"; content: "\\70"; }
+.icon-equalizer::before { font-family: "CHXD Media"; content: "\\71"; }
+.icon-record::before { font-family: "CHXD Media"; content: "\\72"; }
+.icon-stop-circle::before { font-family: "CHXD Media"; content: "\\73"; }
+.icon-subtitles::before { font-family: "CHXD Media"; content: "\\74"; }
+.icon-unmute::before { font-family: "CHXD Media"; content: "\\75"; }
+.icon-speaker::before { font-family: "CHXD Media"; content: "\\76"; }
+.icon-audio-waveform::before { font-family: "CHXD Media"; content: "\\77"; }
+.icon-screenshot::before { font-family: "CHXD Media"; content: "\\78"; }
+.icon-playback-speed::before { font-family: "CHXD Media"; content: "\\79"; }
+.icon-zap::before { font-family: "CHXD Miscellaneous"; content: "\\21"; }
+.icon-hash::before { font-family: "CHXD Miscellaneous"; content: "\\23"; }
+.icon-ruler::before { font-family: "CHXD Miscellaneous"; content: "\\24"; }
+.icon-pie-chart::before { font-family: "CHXD Miscellaneous"; content: "\\25"; }
+.icon-send::before { font-family: "CHXD Miscellaneous"; content: "\\26"; }
+.icon-star::before { font-family: "CHXD Miscellaneous"; content: "\\2A"; }
+.icon-plus::before { font-family: "CHXD Miscellaneous"; content: "\\2B"; }
+.icon-minus::before { font-family: "CHXD Miscellaneous"; content: "\\2D"; }
+.icon-line-chart::before { font-family: "CHXD Miscellaneous"; content: "\\2F"; }
+.icon-external-link::before { font-family: "CHXD Miscellaneous"; content: "\\3E"; }
+.icon-at-sign::before { font-family: "CHXD Miscellaneous"; content: "\\40"; }
+.icon-loader::before { font-family: "CHXD Miscellaneous"; content: "\\41"; }
+.icon-battery::before { font-family: "CHXD Miscellaneous"; content: "\\42"; }
+.icon-cloud::before { font-family: "CHXD Miscellaneous"; content: "\\43"; }
+.icon-database::before { font-family: "CHXD Miscellaneous"; content: "\\44"; }
+.icon-palette::before { font-family: "CHXD Miscellaneous"; content: "\\45"; }
+.icon-highlighter::before { font-family: "CHXD Miscellaneous"; content: "\\48"; }
+.icon-inbox::before { font-family: "CHXD Miscellaneous"; content: "\\49"; }
+.icon-package::before { font-family: "CHXD Miscellaneous"; content: "\\4B"; }
+.icon-laptop::before { font-family: "CHXD Miscellaneous"; content: "\\4C"; }
+.icon-moon::before { font-family: "CHXD Miscellaneous"; content: "\\4E"; }
+.icon-power::before { font-family: "CHXD Miscellaneous"; content: "\\4F"; }
+.icon-pin::before { font-family: "CHXD Miscellaneous"; content: "\\50"; }
+.icon-reply::before { font-family: "CHXD Miscellaneous"; content: "\\52"; }
+.icon-shield::before { font-family: "CHXD Miscellaneous"; content: "\\53"; }
+.icon-smartphone::before { font-family: "CHXD Miscellaneous"; content: "\\54"; }
+.icon-users::before { font-family: "CHXD Miscellaneous"; content: "\\55"; }
+.icon-window::before { font-family: "CHXD Miscellaneous"; content: "\\57"; }
+.icon-minimize::before { font-family: "CHXD Miscellaneous"; content: "\\5B"; }
+.icon-maximize::before { font-family: "CHXD Miscellaneous"; content: "\\5D"; }
+.icon-tag::before { font-family: "CHXD Miscellaneous"; content: "\\61"; }
+.icon-bookmark::before { font-family: "CHXD Miscellaneous"; content: "\\62"; }
+.icon-calendar::before { font-family: "CHXD Miscellaneous"; content: "\\63"; }
+.icon-clipboard::before { font-family: "CHXD Miscellaneous"; content: "\\64"; }
+.icon-credit-card::before { font-family: "CHXD Miscellaneous"; content: "\\65"; }
+.icon-flag::before { font-family: "CHXD Miscellaneous"; content: "\\66"; }
+.icon-globe::before { font-family: "CHXD Miscellaneous"; content: "\\67"; }
+.icon-home::before { font-family: "CHXD Miscellaneous"; content: "\\68"; }
+.icon-lightbulb::before { font-family: "CHXD Miscellaneous"; content: "\\69"; }
+.icon-key::before { font-family: "CHXD Miscellaneous"; content: "\\6B"; }
+.icon-heart::before { font-family: "CHXD Miscellaneous"; content: "\\6C"; }
+.icon-mail::before { font-family: "CHXD Miscellaneous"; content: "\\6D"; }
+.icon-sun::before { font-family: "CHXD Miscellaneous"; content: "\\6E"; }
+.icon-clock::before { font-family: "CHXD Miscellaneous"; content: "\\6F"; }
+.icon-map-pin::before { font-family: "CHXD Miscellaneous"; content: "\\70"; }
+.icon-qr-code::before { font-family: "CHXD Miscellaneous"; content: "\\71"; }
+.icon-wrench::before { font-family: "CHXD Miscellaneous"; content: "\\72"; }
+.icon-paintbrush::before { font-family: "CHXD Miscellaneous"; content: "\\73"; }
+.icon-phone::before { font-family: "CHXD Miscellaneous"; content: "\\74"; }
+.icon-user::before { font-family: "CHXD Miscellaneous"; content: "\\75"; }
+.icon-split-vertical::before { font-family: "CHXD Miscellaneous"; content: "\\76"; }
+.icon-wifi::before { font-family: "CHXD Miscellaneous"; content: "\\77"; }
+.icon-thumbs-up::before { font-family: "CHXD Miscellaneous"; content: "\\79"; }
+.icon-split-horizontal::before { font-family: "CHXD Miscellaneous"; content: "\\7A"; }
+.icon-bar-chart::before { font-family: "CHXD Miscellaneous"; content: "\\7C"; }
+.icon-first-page::before { font-family: "CHXD Navigation"; content: "\\28"; }
+.icon-last-page::before { font-family: "CHXD Navigation"; content: "\\29"; }
+.icon-left::before { font-family: "CHXD Navigation"; content: "\\3C"; }
+.icon-right::before { font-family: "CHXD Navigation"; content: "\\3E"; }
+.icon-arrow-down-left::before { font-family: "CHXD Navigation"; content: "\\44"; }
+.icon-arrow-up-right::before { font-family: "CHXD Navigation"; content: "\\55"; }
+.icon-back::before { font-family: "CHXD Navigation"; content: "\\5B"; }
+.icon-forward::before { font-family: "CHXD Navigation"; content: "\\5D"; }
+.icon-up::before { font-family: "CHXD Navigation"; content: "\\5E"; }
+.icon-scroll-to-bottom::before { font-family: "CHXD Navigation"; content: "\\62"; }
+.icon-arrow-down::before { font-family: "CHXD Navigation"; content: "\\64"; }
+.icon-login::before { font-family: "CHXD Navigation"; content: "\\69"; }
+.icon-chevrons-left::before { font-family: "CHXD Navigation"; content: "\\6C"; }
+.icon-logout::before { font-family: "CHXD Navigation"; content: "\\6F"; }
+.icon-chevrons-right::before { font-family: "CHXD Navigation"; content: "\\72"; }
+.icon-scroll-to-top::before { font-family: "CHXD Navigation"; content: "\\74"; }
+.icon-arrow-up::before { font-family: "CHXD Navigation"; content: "\\75"; }
+.icon-down::before { font-family: "CHXD Navigation"; content: "\\76"; }
+.icon-previous::before { font-family: "CHXD Navigation"; content: "\\7B"; }
+.icon-next::before { font-family: "CHXD Navigation"; content: "\\7D"; }
+.icon-rows::before { font-family: "CHXD Sorting and Views"; content: "\\2D"; }
+.icon-drag-handle::before { font-family: "CHXD Sorting and Views"; content: "\\3A"; }
+.icon-chevrons-up-down::before { font-family: "CHXD Sorting and Views"; content: "\\3D"; }
+.icon-compact-view::before { font-family: "CHXD Sorting and Views"; content: "\\43"; }
+.icon-details-view::before { font-family: "CHXD Sorting and Views"; content: "\\44"; }
+.icon-grid-small::before { font-family: "CHXD Sorting and Views"; content: "\\47"; }
+.icon-sort-ascending::before { font-family: "CHXD Sorting and Views"; content: "\\5E"; }
+.icon-sort-az::before { font-family: "CHXD Sorting and Views"; content: "\\61"; }
+.icon-card-view::before { font-family: "CHXD Sorting and Views"; content: "\\63"; }
+.icon-sort-by-date::before { font-family: "CHXD Sorting and Views"; content: "\\64"; }
+.icon-group-by::before { font-family: "CHXD Sorting and Views"; content: "\\67"; }
+.icon-kanban-board::before { font-family: "CHXD Sorting and Views"; content: "\\6B"; }
+.icon-sort-by-size::before { font-family: "CHXD Sorting and Views"; content: "\\73"; }
+.icon-sort-descending::before { font-family: "CHXD Sorting and Views"; content: "\\76"; }
+.icon-sort-za::before { font-family: "CHXD Sorting and Views"; content: "\\7A"; }
+.icon-columns::before { font-family: "CHXD Sorting and Views"; content: "\\7C"; }
+.icon-numbered-list::before { font-family: "CHXD Text Editor"; content: "\\23"; }
+.icon-quote::before { font-family: "CHXD Text Editor"; content: "\\27"; }
+.icon-bullet-list::before { font-family: "CHXD Text Editor"; content: "\\2A"; }
+.icon-horizontal-rule::before { font-family: "CHXD Text Editor"; content: "\\2D"; }
+.icon-outdent::before { font-family: "CHXD Text Editor"; content: "\\3C"; }
+.icon-indent::before { font-family: "CHXD Text Editor"; content: "\\3E"; }
+.icon-spell-check::before { font-family: "CHXD Text Editor"; content: "\\3F"; }
+.icon-table-column-add::before { font-family: "CHXD Text Editor"; content: "\\41"; }
+.icon-page-break::before { font-family: "CHXD Text Editor"; content: "\\42"; }
+.icon-text-color::before { font-family: "CHXD Text Editor"; content: "\\43"; }
+.icon-exit-fullscreen::before { font-family: "CHXD Text Editor"; content: "\\45"; }
+.icon-fullscreen::before { font-family: "CHXD Text Editor"; content: "\\46"; }
+.icon-heading::before { font-family: "CHXD Text Editor"; content: "\\48"; }
+.icon-unlink::before { font-family: "CHXD Text Editor"; content: "\\4B"; }
+.icon-page-footer::before { font-family: "CHXD Text Editor"; content: "\\50"; }
+.icon-table-row-add::before { font-family: "CHXD Text Editor"; content: "\\52"; }
+.icon-text::before { font-family: "CHXD Text Editor"; content: "\\54"; }
+.icon-clear-formatting::before { font-family: "CHXD Text Editor"; content: "\\58"; }
+.icon-superscript::before { font-family: "CHXD Text Editor"; content: "\\5E"; }
+.icon-subscript::before { font-family: "CHXD Text Editor"; content: "\\5F"; }
+.icon-page-header::before { font-family: "CHXD Text Editor"; content: "\\61"; }
+.icon-bold::before { font-family: "CHXD Text Editor"; content: "\\62"; }
+.icon-align-center::before { font-family: "CHXD Text Editor"; content: "\\63"; }
+.icon-line-height::before { font-family: "CHXD Text Editor"; content: "\\68"; }
+.icon-italic::before { font-family: "CHXD Text Editor"; content: "\\69"; }
+.icon-align-justify::before { font-family: "CHXD Text Editor"; content: "\\6A"; }
+.icon-link::before { font-family: "CHXD Text Editor"; content: "\\6B"; }
+.icon-align-left::before { font-family: "CHXD Text Editor"; content: "\\6C"; }
+.icon-comment::before { font-family: "CHXD Text Editor"; content: "\\6D"; }
+.icon-paragraph::before { font-family: "CHXD Text Editor"; content: "\\70"; }
+.icon-align-right::before { font-family: "CHXD Text Editor"; content: "\\72"; }
+.icon-strikethrough::before { font-family: "CHXD Text Editor"; content: "\\73"; }
+.icon-table::before { font-family: "CHXD Text Editor"; content: "\\74"; }
+.icon-underline::before { font-family: "CHXD Text Editor"; content: "\\75"; }
+.icon-word-wrap::before { font-family: "CHXD Text Editor"; content: "\\77"; }
+.icon-checklist::before { font-family: "CHXD Text Editor"; content: "\\78"; }
+.icon-font-size::before { font-family: "CHXD Text Editor"; content: "\\7A"; }
+.icon-text-cursor::before { font-family: "CHXD Text Editor"; content: "\\7C"; }
+.icon-error-circle::before { font-family: "CHXD UI Controls"; content: "\\21"; }
+.icon-progress::before { font-family: "CHXD UI Controls"; content: "\\25"; }
+.icon-add-circle::before { font-family: "CHXD UI Controls"; content: "\\2B"; }
+.icon-checkbox-mixed::before { font-family: "CHXD UI Controls"; content: "\\2D"; }
+.icon-more::before { font-family: "CHXD UI Controls"; content: "\\2E"; }
+.icon-list-view::before { font-family: "CHXD UI Controls"; content: "\\31"; }
+.icon-grid-view::before { font-family: "CHXD UI Controls"; content: "\\32"; }
+.icon-more-horizontal::before { font-family: "CHXD UI Controls"; content: "\\3A"; }
+.icon-more-vertical::before { font-family: "CHXD UI Controls"; content: "\\3B"; }
+.icon-slider::before { font-family: "CHXD UI Controls"; content: "\\3D"; }
+.icon-help::before { font-family: "CHXD UI Controls"; content: "\\3F"; }
+.icon-eye-off::before { font-family: "CHXD UI Controls"; content: "\\45"; }
+.icon-shield-check::before { font-family: "CHXD UI Controls"; content: "\\48"; }
+.icon-unlock::before { font-family: "CHXD UI Controls"; content: "\\4C"; }
+.icon-notifications-off::before { font-family: "CHXD UI Controls"; content: "\\4E"; }
+.icon-checkbox-checked::before { font-family: "CHXD UI Controls"; content: "\\4F"; }
+.icon-radio-selected::before { font-family: "CHXD UI Controls"; content: "\\52"; }
+.icon-sort::before { font-family: "CHXD UI Controls"; content: "\\53"; }
+.icon-toggle-on::before { font-family: "CHXD UI Controls"; content: "\\54"; }
+.icon-check-circle::before { font-family: "CHXD UI Controls"; content: "\\56"; }
+.icon-warning::before { font-family: "CHXD UI Controls"; content: "\\57"; }
+.icon-sidebar::before { font-family: "CHXD UI Controls"; content: "\\5B"; }
+.icon-sidebar-right::before { font-family: "CHXD UI Controls"; content: "\\5D"; }
+.icon-panel::before { font-family: "CHXD UI Controls"; content: "\\5F"; }
+.icon-dashboard::before { font-family: "CHXD UI Controls"; content: "\\64"; }
+.icon-eye::before { font-family: "CHXD UI Controls"; content: "\\65"; }
+.icon-filter::before { font-family: "CHXD UI Controls"; content: "\\66"; }
+.icon-information::before { font-family: "CHXD UI Controls"; content: "\\69"; }
+.icon-lock::before { font-family: "CHXD UI Controls"; content: "\\6C"; }
+.icon-menu::before { font-family: "CHXD UI Controls"; content: "\\6D"; }
+.icon-notifications::before { font-family: "CHXD UI Controls"; content: "\\6E"; }
+.icon-checkbox::before { font-family: "CHXD UI Controls"; content: "\\6F"; }
+.icon-preferences::before { font-family: "CHXD UI Controls"; content: "\\70"; }
+.icon-radio::before { font-family: "CHXD UI Controls"; content: "\\72"; }
+.icon-settings::before { font-family: "CHXD UI Controls"; content: "\\73"; }
+.icon-toggle-off::before { font-family: "CHXD UI Controls"; content: "\\74"; }
+.icon-dropdown::before { font-family: "CHXD UI Controls"; content: "\\75"; }
+.icon-check::before { font-family: "CHXD UI Controls"; content: "\\76"; }
+.icon-close::before { font-family: "CHXD UI Controls"; content: "\\78"; }
+.icon-travel-and-places-traffic-cone::before { font-family: "CHXD Travel and Places"; content: "\\21"; }
+.icon-travel-and-places-ticket::before { font-family: "CHXD Travel and Places"; content: "\\23"; }
+.icon-travel-and-places-anchor::before { font-family: "CHXD Travel and Places"; content: "\\41"; }
+.icon-travel-and-places-bus::before { font-family: "CHXD Travel and Places"; content: "\\42"; }
+.icon-travel-and-places-train::before { font-family: "CHXD Travel and Places"; content: "\\54"; }
+.icon-travel-and-places-airplane::before { font-family: "CHXD Travel and Places"; content: "\\61"; }
+.icon-travel-and-places-bicycle::before { font-family: "CHXD Travel and Places"; content: "\\62"; }
+.icon-travel-and-places-car::before { font-family: "CHXD Travel and Places"; content: "\\63"; }
+.icon-travel-and-places-rocket::before { font-family: "CHXD Travel and Places"; content: "\\72"; }
+.icon-travel-and-places-sailboat::before { font-family: "CHXD Travel and Places"; content: "\\73"; }
+.icon-travel-and-places-tent::before { font-family: "CHXD Travel and Places"; content: "\\74"; }
+.icon-documents-and-reading-page-turn::before { font-family: "CHXD Documents and Reading"; content: "\\3E"; }
+.icon-documents-and-reading-books::before { font-family: "CHXD Documents and Reading"; content: "\\42"; }
+.icon-documents-and-reading-copyright::before { font-family: "CHXD Documents and Reading"; content: "\\43"; }
+.icon-documents-and-reading-library::before { font-family: "CHXD Documents and Reading"; content: "\\4C"; }
+.icon-documents-and-reading-magazine::before { font-family: "CHXD Documents and Reading"; content: "\\4D"; }
+.icon-documents-and-reading-newspaper::before { font-family: "CHXD Documents and Reading"; content: "\\4E"; }
+.icon-documents-and-reading-book::before { font-family: "CHXD Documents and Reading"; content: "\\62"; }
+.icon-documents-and-reading-dictionary::before { font-family: "CHXD Documents and Reading"; content: "\\64"; }
+.icon-documents-and-reading-graduation-cap::before { font-family: "CHXD Documents and Reading"; content: "\\67"; }
+.icon-documents-and-reading-notebook::before { font-family: "CHXD Documents and Reading"; content: "\\6E"; }
+.icon-documents-and-reading-book-open::before { font-family: "CHXD Documents and Reading"; content: "\\6F"; }
+.icon-documents-and-reading-sticky-note::before { font-family: "CHXD Documents and Reading"; content: "\\73"; }
+.icon-reactions-and-emoji-party-popper::before { font-family: "CHXD Reactions and Emoji"; content: "\\21"; }
+.icon-reactions-and-emoji-smile::before { font-family: "CHXD Reactions and Emoji"; content: "\\29"; }
+.icon-reactions-and-emoji-neutral::before { font-family: "CHXD Reactions and Emoji"; content: "\\2D"; }
+.icon-reactions-and-emoji-wink::before { font-family: "CHXD Reactions and Emoji"; content: "\\3B"; }
+.icon-reactions-and-emoji-confused::before { font-family: "CHXD Reactions and Emoji"; content: "\\3F"; }
+.icon-reactions-and-emoji-cool::before { font-family: "CHXD Reactions and Emoji"; content: "\\43"; }
+.icon-reactions-and-emoji-skull::before { font-family: "CHXD Reactions and Emoji"; content: "\\4B"; }
+.icon-reactions-and-emoji-surprised::before { font-family: "CHXD Reactions and Emoji"; content: "\\4F"; }
+.icon-reactions-and-emoji-sticker::before { font-family: "CHXD Reactions and Emoji"; content: "\\53"; }
+.icon-reactions-and-emoji-clap::before { font-family: "CHXD Reactions and Emoji"; content: "\\63"; }
+.icon-reactions-and-emoji-thumbs-down::before { font-family: "CHXD Reactions and Emoji"; content: "\\64"; }
+.icon-reactions-and-emoji-emoji::before { font-family: "CHXD Reactions and Emoji"; content: "\\65"; }
+.icon-reactions-and-emoji-frown::before { font-family: "CHXD Reactions and Emoji"; content: "\\66"; }
+.icon-reactions-and-emoji-gif::before { font-family: "CHXD Reactions and Emoji"; content: "\\67"; }
+.icon-reactions-and-emoji-love-eyes::before { font-family: "CHXD Reactions and Emoji"; content: "\\68"; }
+.icon-reactions-and-emoji-laughing::before { font-family: "CHXD Reactions and Emoji"; content: "\\6C"; }
+.icon-reactions-and-emoji-mad::before { font-family: "CHXD Reactions and Emoji"; content: "\\6D"; }
+.icon-reactions-and-emoji-sad::before { font-family: "CHXD Reactions and Emoji"; content: "\\73"; }
+.icon-reactions-and-emoji-tongue::before { font-family: "CHXD Reactions and Emoji"; content: "\\74"; }
+.icon-reactions-and-emoji-heart-broken::before { font-family: "CHXD Reactions and Emoji"; content: "\\78"; }
+.icon-reactions-and-emoji-cry::before { font-family: "CHXD Reactions and Emoji"; content: "\\79"; }
+.icon-reactions-and-emoji-sleepy::before { font-family: "CHXD Reactions and Emoji"; content: "\\7A"; }
+.icon-health-and-care-medical-cross::before { font-family: "CHXD Health and Care"; content: "\\2B"; }
+.icon-health-and-care-bandage::before { font-family: "CHXD Health and Care"; content: "\\62"; }
+.icon-health-and-care-heart-pulse::before { font-family: "CHXD Health and Care"; content: "\\68"; }
+.icon-health-and-care-pill::before { font-family: "CHXD Health and Care"; content: "\\70"; }
+.icon-games-and-fun-sparkles::before { font-family: "CHXD Games and Fun"; content: "\\2A"; }
+.icon-games-and-fun-gift::before { font-family: "CHXD Games and Fun"; content: "\\2B"; }
+.icon-games-and-fun-dice-1::before { font-family: "CHXD Games and Fun"; content: "\\31"; }
+.icon-games-and-fun-dice-2::before { font-family: "CHXD Games and Fun"; content: "\\32"; }
+.icon-games-and-fun-dice-3::before { font-family: "CHXD Games and Fun"; content: "\\33"; }
+.icon-games-and-fun-dice-4::before { font-family: "CHXD Games and Fun"; content: "\\34"; }
+.icon-games-and-fun-dice-5::before { font-family: "CHXD Games and Fun"; content: "\\35"; }
+.icon-games-and-fun-dice-6::before { font-family: "CHXD Games and Fun"; content: "\\36"; }
+.icon-games-and-fun-target::before { font-family: "CHXD Games and Fun"; content: "\\40"; }
+.icon-games-and-fun-crown::before { font-family: "CHXD Games and Fun"; content: "\\43"; }
+.icon-games-and-fun-ghost::before { font-family: "CHXD Games and Fun"; content: "\\47"; }
+.icon-games-and-fun-ghost-dead::before { font-family: "CHXD Games and Fun"; content: "\\58"; }
+.icon-games-and-fun-balloon::before { font-family: "CHXD Games and Fun"; content: "\\62"; }
+.icon-games-and-fun-playing-cards::before { font-family: "CHXD Games and Fun"; content: "\\63"; }
+.icon-games-and-fun-gamepad::before { font-family: "CHXD Games and Fun"; content: "\\67"; }
+.icon-games-and-fun-joystick::before { font-family: "CHXD Games and Fun"; content: "\\6A"; }
+.icon-games-and-fun-medal::before { font-family: "CHXD Games and Fun"; content: "\\6D"; }
+.icon-games-and-fun-chess-pawn::before { font-family: "CHXD Games and Fun"; content: "\\70"; }
+.icon-games-and-fun-trophy::before { font-family: "CHXD Games and Fun"; content: "\\74"; }
+.icon-games-and-fun-magic-wand::before { font-family: "CHXD Games and Fun"; content: "\\77"; }
+.icon-people-and-identity-user-check::before { font-family: "CHXD People and Identity"; content: "\\2B"; }
+.icon-people-and-identity-user-minus::before { font-family: "CHXD People and Identity"; content: "\\2D"; }
+.icon-people-and-identity-user-plus::before { font-family: "CHXD People and Identity"; content: "\\3D"; }
+.icon-people-and-identity-female::before { font-family: "CHXD People and Identity"; content: "\\46"; }
+.icon-people-and-identity-transgender::before { font-family: "CHXD People and Identity"; content: "\\54"; }
+.icon-people-and-identity-accessibility::before { font-family: "CHXD People and Identity"; content: "\\61"; }
+.icon-people-and-identity-baby::before { font-family: "CHXD People and Identity"; content: "\\62"; }
+.icon-people-and-identity-cane::before { font-family: "CHXD People and Identity"; content: "\\63"; }
+.icon-people-and-identity-ear::before { font-family: "CHXD People and Identity"; content: "\\65"; }
+.icon-people-and-identity-family::before { font-family: "CHXD People and Identity"; content: "\\66"; }
+.icon-people-and-identity-gender-neutral::before { font-family: "CHXD People and Identity"; content: "\\67"; }
+.icon-people-and-identity-id-card::before { font-family: "CHXD People and Identity"; content: "\\69"; }
+.icon-people-and-identity-male::before { font-family: "CHXD People and Identity"; content: "\\6D"; }
+.icon-people-and-identity-profile::before { font-family: "CHXD People and Identity"; content: "\\70"; }
+.icon-people-and-identity-wheelchair::before { font-family: "CHXD People and Identity"; content: "\\77"; }
+.icon-people-and-identity-user-x::before { font-family: "CHXD People and Identity"; content: "\\78"; }
+.icon-language-and-input-numpad::before { font-family: "CHXD Language and Input"; content: "\\23"; }
+.icon-language-and-input-mouse-left::before { font-family: "CHXD Language and Input"; content: "\\3C"; }
+.icon-language-and-input-mouse-right::before { font-family: "CHXD Language and Input"; content: "\\3E"; }
+.icon-language-and-input-backspace::before { font-family: "CHXD Language and Input"; content: "\\42"; }
+.icon-language-and-input-caps-lock::before { font-family: "CHXD Language and Input"; content: "\\43"; }
+.icon-language-and-input-enter-key::before { font-family: "CHXD Language and Input"; content: "\\45"; }
+.icon-language-and-input-floating-keyboard::before { font-family: "CHXD Language and Input"; content: "\\4B"; }
+.icon-language-and-input-text-direction-ltr::before { font-family: "CHXD Language and Input"; content: "\\4C"; }
+.icon-language-and-input-text-direction-rtl::before { font-family: "CHXD Language and Input"; content: "\\52"; }
+.icon-language-and-input-tab-key::before { font-family: "CHXD Language and Input"; content: "\\54"; }
+.icon-language-and-input-braille::before { font-family: "CHXD Language and Input"; content: "\\62"; }
+.icon-language-and-input-handwriting::before { font-family: "CHXD Language and Input"; content: "\\68"; }
+.icon-language-and-input-language::before { font-family: "CHXD Language and Input"; content: "\\6C"; }
+.icon-language-and-input-mouse::before { font-family: "CHXD Language and Input"; content: "\\6D"; }
+.icon-language-and-input-stylus::before { font-family: "CHXD Language and Input"; content: "\\70"; }
+.icon-language-and-input-sign-language::before { font-family: "CHXD Language and Input"; content: "\\73"; }
+.icon-language-and-input-touchpad::before { font-family: "CHXD Language and Input"; content: "\\74"; }
+.icon-language-and-input-translate::before { font-family: "CHXD Language and Input"; content: "\\78"; }
+.icon-device-and-system-brightness-high::before { font-family: "CHXD Device and System"; content: "\\2B"; }
+.icon-device-and-system-brightness-low::before { font-family: "CHXD Device and System"; content: "\\2D"; }
+.icon-device-and-system-location-on::before { font-family: "CHXD Device and System"; content: "\\40"; }
+.icon-device-and-system-sim-card::before { font-family: "CHXD Device and System"; content: "\\4D"; }
+.icon-device-and-system-screencast::before { font-family: "CHXD Device and System"; content: "\\53"; }
+.icon-device-and-system-update::before { font-family: "CHXD Device and System"; content: "\\55"; }
+.icon-device-and-system-destroy::before { font-family: "CHXD Device and System"; content: "\\58"; }
+.icon-device-and-system-upgrade::before { font-family: "CHXD Device and System"; content: "\\5E"; }
+.icon-device-and-system-cctv::before { font-family: "CHXD Device and System"; content: "\\63"; }
+.icon-device-and-system-face-scan::before { font-family: "CHXD Device and System"; content: "\\66"; }
+.icon-device-and-system-install::before { font-family: "CHXD Device and System"; content: "\\69"; }
+.icon-device-and-system-location-off::before { font-family: "CHXD Device and System"; content: "\\6F"; }
+.icon-device-and-system-repair::before { font-family: "CHXD Device and System"; content: "\\72"; }
+.icon-device-and-system-uninstall::before { font-family: "CHXD Device and System"; content: "\\75"; }
+.icon-device-and-system-vibrate::before { font-family: "CHXD Device and System"; content: "\\76"; }
+.icon-device-and-system-floating-window::before { font-family: "CHXD Device and System"; content: "\\77"; }
+.icon-apps-and-utilities-barcode::before { font-family: "CHXD Apps and Utilities"; content: "\\23"; }
+.icon-apps-and-utilities-bulb-bright::before { font-family: "CHXD Apps and Utilities"; content: "\\2A"; }
+.icon-apps-and-utilities-flashlight-on::before { font-family: "CHXD Apps and Utilities"; content: "\\2B"; }
+.icon-apps-and-utilities-flashlight-off::before { font-family: "CHXD Apps and Utilities"; content: "\\2D"; }
+.icon-apps-and-utilities-battery-charging::before { font-family: "CHXD Apps and Utilities"; content: "\\42"; }
+.icon-apps-and-utilities-receipt::before { font-family: "CHXD Apps and Utilities"; content: "\\52"; }
+.icon-apps-and-utilities-stopwatch::before { font-family: "CHXD Apps and Utilities"; content: "\\53"; }
+.icon-apps-and-utilities-alarm-clock::before { font-family: "CHXD Apps and Utilities"; content: "\\61"; }
+.icon-apps-and-utilities-bulb::before { font-family: "CHXD Apps and Utilities"; content: "\\62"; }
+.icon-apps-and-utilities-calculator::before { font-family: "CHXD Apps and Utilities"; content: "\\63"; }
+.icon-apps-and-utilities-hourglass::before { font-family: "CHXD Apps and Utilities"; content: "\\68"; }
+.icon-apps-and-utilities-magnet::before { font-family: "CHXD Apps and Utilities"; content: "\\6D"; }
+.icon-apps-and-utilities-note::before { font-family: "CHXD Apps and Utilities"; content: "\\6E"; }
+.icon-apps-and-utilities-radio-receiver::before { font-family: "CHXD Apps and Utilities"; content: "\\72"; }
+.icon-apps-and-utilities-scale::before { font-family: "CHXD Apps and Utilities"; content: "\\73"; }
+.icon-apps-and-utilities-timer::before { font-family: "CHXD Apps and Utilities"; content: "\\74"; }
+.icon-weather-and-nature-cloud-lightning::before { font-family: "CHXD Weather and Nature"; content: "\\21"; }
+.icon-weather-and-nature-flame::before { font-family: "CHXD Weather and Nature"; content: "\\2A"; }
+.icon-weather-and-nature-flame-hot::before { font-family: "CHXD Weather and Nature"; content: "\\46"; }
+.icon-weather-and-nature-tree::before { font-family: "CHXD Weather and Nature"; content: "\\54"; }
+.icon-weather-and-nature-wind::before { font-family: "CHXD Weather and Nature"; content: "\\57"; }
+.icon-weather-and-nature-mountain::before { font-family: "CHXD Weather and Nature"; content: "\\5E"; }
+.icon-weather-and-nature-umbrella::before { font-family: "CHXD Weather and Nature"; content: "\\61"; }
+.icon-weather-and-nature-sunset::before { font-family: "CHXD Weather and Nature"; content: "\\64"; }
+.icon-weather-and-nature-fish::before { font-family: "CHXD Weather and Nature"; content: "\\66"; }
+.icon-weather-and-nature-leaf::before { font-family: "CHXD Weather and Nature"; content: "\\6C"; }
+.icon-weather-and-nature-flower::before { font-family: "CHXD Weather and Nature"; content: "\\6F"; }
+.icon-weather-and-nature-paw::before { font-family: "CHXD Weather and Nature"; content: "\\70"; }
+.icon-weather-and-nature-cloud-rain::before { font-family: "CHXD Weather and Nature"; content: "\\72"; }
+.icon-weather-and-nature-cloud-snow::before { font-family: "CHXD Weather and Nature"; content: "\\73"; }
+.icon-weather-and-nature-thermometer::before { font-family: "CHXD Weather and Nature"; content: "\\74"; }
+.icon-weather-and-nature-sunrise::before { font-family: "CHXD Weather and Nature"; content: "\\75"; }
+.icon-weather-and-nature-waves::before { font-family: "CHXD Weather and Nature"; content: "\\77"; }
+.icon-weather-and-nature-snowflake::before { font-family: "CHXD Weather and Nature"; content: "\\78"; }
+.icon-weather-and-nature-rainbow::before { font-family: "CHXD Weather and Nature"; content: "\\7E"; }
+.icon-web-and-connectivity-qr-scanner::before { font-family: "CHXD Web and Connectivity"; content: "\\23"; }
+.icon-web-and-connectivity-new-tab::before { font-family: "CHXD Web and Connectivity"; content: "\\2B"; }
+.icon-web-and-connectivity-cloud-off::before { font-family: "CHXD Web and Connectivity"; content: "\\2D"; }
+.icon-web-and-connectivity-browser::before { font-family: "CHXD Web and Connectivity"; content: "\\42"; }
+.icon-web-and-connectivity-compass::before { font-family: "CHXD Web and Connectivity"; content: "\\43"; }
+.icon-web-and-connectivity-nfc::before { font-family: "CHXD Web and Connectivity"; content: "\\4E"; }
+.icon-web-and-connectivity-rss::before { font-family: "CHXD Web and Connectivity"; content: "\\52"; }
+.icon-web-and-connectivity-wifi-off::before { font-family: "CHXD Web and Connectivity"; content: "\\57"; }
+.icon-web-and-connectivity-cloud-upload::before { font-family: "CHXD Web and Connectivity"; content: "\\5E"; }
+.icon-web-and-connectivity-bluetooth::before { font-family: "CHXD Web and Connectivity"; content: "\\62"; }
+.icon-web-and-connectivity-cell-tower::before { font-family: "CHXD Web and Connectivity"; content: "\\63"; }
+.icon-web-and-connectivity-ethernet::before { font-family: "CHXD Web and Connectivity"; content: "\\65"; }
+.icon-web-and-connectivity-hotspot::before { font-family: "CHXD Web and Connectivity"; content: "\\68"; }
+.icon-web-and-connectivity-incognito::before { font-family: "CHXD Web and Connectivity"; content: "\\69"; }
+.icon-web-and-connectivity-map::before { font-family: "CHXD Web and Connectivity"; content: "\\6D"; }
+.icon-web-and-connectivity-network::before { font-family: "CHXD Web and Connectivity"; content: "\\6E"; }
+.icon-web-and-connectivity-cookie::before { font-family: "CHXD Web and Connectivity"; content: "\\6F"; }
+.icon-web-and-connectivity-plug::before { font-family: "CHXD Web and Connectivity"; content: "\\70"; }
+.icon-web-and-connectivity-router::before { font-family: "CHXD Web and Connectivity"; content: "\\72"; }
+.icon-web-and-connectivity-signal::before { font-family: "CHXD Web and Connectivity"; content: "\\73"; }
+.icon-web-and-connectivity-usb::before { font-family: "CHXD Web and Connectivity"; content: "\\75"; }
+.icon-web-and-connectivity-vpn::before { font-family: "CHXD Web and Connectivity"; content: "\\76"; }
+.icon-social-and-communication-bell-ring::before { font-family: "CHXD Social and Communication"; content: "\\21"; }
+.icon-social-and-communication-poll::before { font-family: "CHXD Social and Communication"; content: "\\25"; }
+.icon-social-and-communication-chat-plus::before { font-family: "CHXD Social and Communication"; content: "\\2B"; }
+.icon-social-and-communication-chat-dots::before { font-family: "CHXD Social and Communication"; content: "\\3A"; }
+.icon-social-and-communication-contact-card::before { font-family: "CHXD Social and Communication"; content: "\\40"; }
+.icon-social-and-communication-video-call::before { font-family: "CHXD Social and Communication"; content: "\\56"; }
+.icon-social-and-communication-voice-message::before { font-family: "CHXD Social and Communication"; content: "\\61"; }
+.icon-social-and-communication-message-bubble::before { font-family: "CHXD Social and Communication"; content: "\\62"; }
+.icon-social-and-communication-group-chat::before { font-family: "CHXD Social and Communication"; content: "\\67"; }
+.icon-social-and-communication-megaphone::before { font-family: "CHXD Social and Communication"; content: "\\6D"; }
+.icon-social-and-communication-mail-open::before { font-family: "CHXD Social and Communication"; content: "\\6F"; }
+.icon-social-and-communication-phone-call::before { font-family: "CHXD Social and Communication"; content: "\\70"; }
+.icon-social-and-communication-short-video::before { font-family: "CHXD Social and Communication"; content: "\\76"; }
+.icon-social-and-communication-voicemail::before { font-family: "CHXD Social and Communication"; content: "\\77"; }
+.icon-media-and-content-live-stream::before { font-family: "CHXD Media and Content"; content: "\\21"; }
+.icon-media-and-content-image-off::before { font-family: "CHXD Media and Content"; content: "\\2D"; }
+.icon-media-and-content-image-placeholder::before { font-family: "CHXD Media and Content"; content: "\\3F"; }
+.icon-media-and-content-tv::before { font-family: "CHXD Media and Content"; content: "\\54"; }
+.icon-media-and-content-broken-image::before { font-family: "CHXD Media and Content"; content: "\\58"; }
+.icon-media-and-content-clapperboard::before { font-family: "CHXD Media and Content"; content: "\\63"; }
+.icon-media-and-content-music-note::before { font-family: "CHXD Media and Content"; content: "\\6E"; }
+.icon-media-and-content-vinyl-record::before { font-family: "CHXD Media and Content"; content: "\\6F"; }
+.icon-media-and-content-podcast::before { font-family: "CHXD Media and Content"; content: "\\70"; }
+.icon-media-and-content-speech-to-text::before { font-family: "CHXD Media and Content"; content: "\\73"; }
+.icon-media-and-content-text-to-speech::before { font-family: "CHXD Media and Content"; content: "\\74"; }
+.icon-social-media-facebook-messenger::before { font-family: "CHXD Social Media"; content: "\\46"; }
+.icon-social-media-linkedin::before { font-family: "CHXD Social Media"; content: "\\4C"; }
+.icon-social-media-tiktok::before { font-family: "CHXD Social Media"; content: "\\54"; }
+.icon-social-media-whatsapp::before { font-family: "CHXD Social Media"; content: "\\57"; }
+.icon-social-media-slack::before { font-family: "CHXD Social Media"; content: "\\61"; }
+.icon-social-media-bluesky::before { font-family: "CHXD Social Media"; content: "\\62"; }
+.icon-social-media-snapchat::before { font-family: "CHXD Social Media"; content: "\\63"; }
+.icon-social-media-discord::before { font-family: "CHXD Social Media"; content: "\\64"; }
+.icon-social-media-medium::before { font-family: "CHXD Social Media"; content: "\\65"; }
+.icon-social-media-facebook::before { font-family: "CHXD Social Media"; content: "\\66"; }
+.icon-social-media-threads::before { font-family: "CHXD Social Media"; content: "\\68"; }
+.icon-social-media-instagram::before { font-family: "CHXD Social Media"; content: "\\69"; }
+.icon-social-media-skype::before { font-family: "CHXD Social Media"; content: "\\6B"; }
+.icon-social-media-line::before { font-family: "CHXD Social Media"; content: "\\6C"; }
+.icon-social-media-mastodon::before { font-family: "CHXD Social Media"; content: "\\6D"; }
+.icon-social-media-pinterest::before { font-family: "CHXD Social Media"; content: "\\70"; }
+.icon-social-media-reddit::before { font-family: "CHXD Social Media"; content: "\\72"; }
+.icon-social-media-signal::before { font-family: "CHXD Social Media"; content: "\\73"; }
+.icon-social-media-telegram::before { font-family: "CHXD Social Media"; content: "\\74"; }
+.icon-social-media-tumblr::before { font-family: "CHXD Social Media"; content: "\\75"; }
+.icon-social-media-viber::before { font-family: "CHXD Social Media"; content: "\\76"; }
+.icon-social-media-twitch::before { font-family: "CHXD Social Media"; content: "\\77"; }
+.icon-social-media-x-twitter::before { font-family: "CHXD Social Media"; content: "\\78"; }
+.icon-social-media-youtube::before { font-family: "CHXD Social Media"; content: "\\79"; }
+.icon-apps-and-services-paypal::before { font-family: "CHXD Apps and Services"; content: "\\24"; }
+.icon-apps-and-services-apple::before { font-family: "CHXD Apps and Services"; content: "\\40"; }
+.icon-apps-and-services-airbnb::before { font-family: "CHXD Apps and Services"; content: "\\41"; }
+.icon-apps-and-services-android::before { font-family: "CHXD Apps and Services"; content: "\\44"; }
+.icon-apps-and-services-figma::before { font-family: "CHXD Apps and Services"; content: "\\46"; }
+.icon-apps-and-services-google::before { font-family: "CHXD Apps and Services"; content: "\\47"; }
+.icon-apps-and-services-github::before { font-family: "CHXD Apps and Services"; content: "\\48"; }
+.icon-apps-and-services-microsoft::before { font-family: "CHXD Apps and Services"; content: "\\4D"; }
+.icon-apps-and-services-playstation::before { font-family: "CHXD Apps and Services"; content: "\\50"; }
+.icon-apps-and-services-steam::before { font-family: "CHXD Apps and Services"; content: "\\53"; }
+.icon-apps-and-services-google-translate::before { font-family: "CHXD Apps and Services"; content: "\\54"; }
+.icon-apps-and-services-wordpress::before { font-family: "CHXD Apps and Services"; content: "\\57"; }
+.icon-apps-and-services-amazon::before { font-family: "CHXD Apps and Services"; content: "\\61"; }
+.icon-apps-and-services-dropbox::before { font-family: "CHXD Apps and Services"; content: "\\62"; }
+.icon-apps-and-services-chrome::before { font-family: "CHXD Apps and Services"; content: "\\63"; }
+.icon-apps-and-services-edge::before { font-family: "CHXD Apps and Services"; content: "\\65"; }
+.icon-apps-and-services-firefox::before { font-family: "CHXD Apps and Services"; content: "\\66"; }
+.icon-apps-and-services-gdrive::before { font-family: "CHXD Apps and Services"; content: "\\67"; }
+.icon-apps-and-services-gmail::before { font-family: "CHXD Apps and Services"; content: "\\6D"; }
+.icon-apps-and-services-opera::before { font-family: "CHXD Apps and Services"; content: "\\6F"; }
+.icon-apps-and-services-google-play::before { font-family: "CHXD Apps and Services"; content: "\\70"; }
+.icon-apps-and-services-spotify::before { font-family: "CHXD Apps and Services"; content: "\\73"; }
+.icon-apps-and-services-uber::before { font-family: "CHXD Apps and Services"; content: "\\75"; }
+.icon-apps-and-services-windows::before { font-family: "CHXD Apps and Services"; content: "\\77"; }
