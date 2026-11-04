@@ -47,6 +47,21 @@ Examples:
 - CHXD Navigation
 - CHXD File Operations
 - CHXD UI Controls
+- CHXD Travel and Places
+- CHXD Documents and Reading
+- CHXD Reactions and Emoji
+- CHXD Health and Care
+- CHXD Games and Fun
+- CHXD People and Identity
+- CHXD Language and Input
+- CHXD Device and System
+- CHXD Apps and Utilities
+- CHXD Weather and Nature
+- CHXD Web and Connectivity
+- CHXD Social and Communication
+- CHXD Media and Content
+- CHXD Social Media
+- CHXD Apps and Services
 
 Each category uses its own font. This means the same keyboard character can represent different icons depending on the selected font.
 
@@ -88,7 +103,9 @@ Once installed, select the desired CHXD font in your application and type the as
 For ordinary text, switch back to your usual font.
 
 ---
+
 # CSS IMPORT
+
 ```css
 @font-face {
     font-family: "CHXD Bags and Storage";
@@ -180,7 +197,115 @@ For ordinary text, switch back to your usual font.
          url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/ui_controls.ttf") format("truetype");
     font-display: swap;
 }
+
+/* Additional Font Families */
+
+@font-face {
+    font-family: "CHXD Travel and Places";
+    src: url("fonts/travel_and_places.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/travel_and_places.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Documents and Reading";
+    src: url("fonts/documents_and_reading.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/documents_and_reading.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Reactions and Emoji";
+    src: url("fonts/reactions_and_emoji.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/reactions_and_emoji.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Health and Care";
+    src: url("fonts/health_and_care.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/health_and_care.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Games and Fun";
+    src: url("fonts/games_and_fun.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/games_and_fun.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD People and Identity";
+    src: url("fonts/people_and_identity.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/people_and_identity.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Language and Input";
+    src: url("fonts/language_and_input.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/language_and_input.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Device and System";
+    src: url("fonts/device_and_system.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/device_and_system.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Apps and Utilities";
+    src: url("fonts/apps_and_utilities.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/apps_and_utilities.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Weather and Nature";
+    src: url("fonts/weather_and_nature.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/weather_and_nature.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Web and Connectivity";
+    src: url("fonts/web_and_connectivity.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/web_and_connectivity.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Social and Communication";
+    src: url("fonts/social_and_communication.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/social_and_communication.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Media and Content";
+    src: url("fonts/media_and_content.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/media_and_content.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Social Media";
+    src: url("fonts/social_media.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/social_media.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CHXD Apps and Services";
+    src: url("fonts/apps_and_services.ttf") format("truetype"),
+         url("https://cdn.jsdelivr.net/gh/cardhollow/font-icon@main/fonts/apps_and_services.ttf") format("truetype");
+    font-display: swap;
+}
 ```
+
 ---
 
 # Font Viewer
@@ -194,6 +319,7 @@ The viewer lets you browse categories, inspect icons and their assigned characte
 ---
 
 # Credits
+
 GitHub: https://github.com/cardhollow/font-icon
 
 Website: https://cardhollow.github.io
